@@ -1,0 +1,8 @@
+double max = tri[0][0];
+		for(int i =0; i<tri.length; i++){
+			for(int j=0; j<tri[i].length; j++){
+				if(max < tri[i][j]){
+					max = tri[i][j];
+				}
+			}
+		}

@@ -1,0 +1,22 @@
+1. Method is something that takes input, does something to the input, and, usually outputs a result.
+2.  Wales
+	England
+	Scotland
+	Wales
+	Ireland
+3. a)
+		i) actual parameters are parameters we pass when we call the method
+		   while formal parameters are parameters we use when we define a method. 
+		ii)A method's return type is the type of the value the function 	
+		   outputs or returns to the caller.
+		iii) polymorphism is when an inhreinted method is redefined by the 	
+		     child object. while method overloading is when we add different methods with the same name that takes different parameters.
+	b)	-2 
+		18
+	c) 
+		i) error will be thrown
+		ii) will use the first method with three parameters and prints a result
+4. 17
+   4
+5. 11
+   7

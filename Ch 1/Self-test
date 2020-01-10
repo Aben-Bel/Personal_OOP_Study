@@ -1,0 +1,26 @@
+1.  a) Program is an application that runs on a computer that performs activities
+	b) Software is an application that runs on a hardware and utilizes hardware components to do activities
+	c) application software is a program that runs in an operating system or on some system sort.
+	d) system softwares are programs that work with hardware to provide services to application softwares
+	e) machine code is an instruction written in byte code 
+	f) source code is the code written by a programmer to instruct a computer to do certain tasks
+	g) embedded softwares are softwares found in hardwares like digital watch, micro-wave...
+	h) compilation is a stage where a highlevel prgramming language is converted to machine or lower level to be run
+	i) java byte code is a converted form of a java code to run on the JVM
+	j) java vitrual machine is a system that runs java byte code and executes the instructions (interpreter)
+	k) integrated development environment is a software that is used to write code on where things are easier with useful features like coloring, integrated command line, ...
+
+2. First the code is complied to java byte code. Then, the java byte code is run on the JVM machine and converted to an executable file. Finally, the executable file is ran.
+
+3. there are single line comment using '\\' and multiple line comment using '\* body *\'
+
+4. ...println adds a newline while ...print doesn't add a newline on the commandline console
+
+5. 	a) Hello, how are you? Fine thanks.
+	b) Hello, how are you?
+	   Fine thanks.
+	c) 1 + 2 + 3 = 6
+
+6. semi-colon and curly braces bracket missing
+
+

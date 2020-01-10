@@ -1,0 +1,60 @@
+1. a) four
+   b) YES
+   	  YES
+   	  YES
+   	  YES
+   	  OK
+
+2. a) three
+   b) YES
+   	  NO
+   	  YES
+   	  NO
+   	  YES
+   	  NO
+   	  OK
+
+3. b) YES
+   	  NO
+   	  YES
+   	  NO
+   	  YES
+   	  NO
+   	  YES
+   	  NO
+   	  OK
+   b) OK
+4. a) eight
+   b) 1
+      3
+      5
+      7
+      9
+      11
+      13
+      15
+    c) it terminates immediately
+5.  a) three
+	b) NO
+	   NO
+	   YES
+	   NO
+	c) infinite loop
+6. *******
+   *******
+   *******
+7. a) while loop runs while some general condition is met which is exactly what we need here.
+   for loop is mostly useful while we are counting and do while is useful when we have to run
+   the loop at least once which is not the case here, since we might not even enter the loop.
+   b) square == num*num
+8. 1
+   2
+   3
+   4
+9. 
+   6
+   7
+   8
+   9
+   10
+

@@ -1,0 +1,9 @@
+REGEX
+	- positive look ahead (?=char)
+	- negative look ahead (?=char)
+	- assertion $
+	- positive look behind (?<=char)
+	- negative look behind (?<!char)
+	- named capture groups: match(/(?<name>.)/).groups
+	- dotall /s (matches accross lines)
+	

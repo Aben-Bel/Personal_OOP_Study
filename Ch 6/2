@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class SomeUsefulArrayMethods{
+	public static void main(String[] args){
+		char choice;
+		Scanner keyboard = new Scanner(System.in);
+		int[] someArray;
+		System.out.print("How many elements to store?: ");
+		int size = keyboard.nextInt();
+		someArray = new int[size];
+		do{
+			System.out.println();
+			System.out.println("[1] Enter values");
+
+			System.out.println(); 
+			System.out.println("[1] Enter values"); 
+			System.out.println("[2] Find maximum"); 
+			System.out.println("[3] Calculate sum"); 
+			System.out.println("[4] Check membership"); System.out.println("[5] Search array"); 
+			System.out.println("[6] Display values"); System.out.println("[7] Exit"); 
+			System.out.print("Enter choice [1-7]: "); 
+			choice = keyboard.next().charAt(0); 
+			System.out.println();
+
+			switch(choice)
+			{
+				case '1': case '2': case '3': case '4':
+				case '5':
+				case '6':
+				fillArray(someArray);
+				break;
+				int max = max(someArray);
+				System.out.println("Maximum array value = " + max); break; int total = sum(someArray);
+				System.out.println("Sum of array values = " + total); break; System.out.print ("Enter value to find: ");
+				int value = keyboard.nextInt();
+				boolean found = contains(someArray, value);
+				if (found) {
+				System.out.println(value + " is in the array"); }
+				else {
+				System.out.println(value + " is not in the array"); }
+				break;
+				System.out.print ("Enter value to find: "); int item = keyboard.nextInt();
+				int index = search(someArray, item);
+				if (index == -999) // indicates value not found {
+				System.out.println ("This value is not in the array"); }
+				else {
+				System.out.println ("This value is at array index " + index); }
+				break;
+				System.out.println("Array values"); displayArray(someArray);
+				break;
+			}
+		}
+	}
+}

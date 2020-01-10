@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class CreditNumberValidation {
+	public static main void(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+
+		System.out.print("Enter credit card number: ");
+		String creditNumber = keyboard.next();
+
+		for(char num : creditNumber ){
+			System.out.println(">>> "+ num);
+		}
+	}
+}

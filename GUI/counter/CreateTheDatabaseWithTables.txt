@@ -1,0 +1,37 @@
+create database flight;
+use flight;
+
+-- creating location table
+CREATE TABLE IF NOT EXISTS Location (Location_ID VARCHAR(45) NOT NULL PRIMARY KEY, City VARCHAR(45) NOT NULL, Country VARCHAR(45) NOT NULL,
+						Airport_Name VARCHAR(45) NOT NULL);
+
+-- creating aircraft table
+CREATE TABLE IF NOT EXISTS Aircraft (Aircraft_id VARCHAR(45) NOT NULL PRIMARY KEY, Model VARCHAR(45) NOT NULL, Brand VARCHAR(45) NOT NULL,
+						First_class_seats INT NOT NULL, Business_class_seats INT NOT NULL, Economic_class_seats INT NOT NULL,
+                        Seat_arrangment VARCHAR(45));
+            
+
+-- creating flight table
+CREATE TABLE IF NOT EXISTS Flight (Flight_ID VARCHAR(20) NOT NULL PRIMARY KEY, Departure_time DATETIME NOT NULL, Arrival_time DATETIME 
+						NOT NULL, Aircraft_Aircraft_id VARCHAR(45), Location_arrival_ID VARCHAR(45), Location_departure_ID VARCHAR(45), 
+                        FOREIGN KEY (Aircraft_Aircraft_id) REFERENCES Aircraft(Aircraft_id), FOREIGN KEY (Location_arrival_ID) REFERENCES 
+                        Location (Location_ID), FOREIGN KEY (Location_departure_ID) REFERENCES Location(Location_ID));
+                    
+-- creating passenger table
+CREATE TABLE IF NOT EXISTS Passenger (Username VARCHAR(20) NOT NULL PRIMARY KEY, Pass VARCHAR(45) NOT NULL, First_name VARCHAR(20) NOT NULL, 
+						Middle_name VARCHAR(20), Last_name VARCHAR(20) NOT NULL, Loyality_Miles DOUBLE NOT NULL, Gender CHAR(2) NOT NULL, 
+                        Phone VARCHAR(20) NOT NULL, Email VARCHAR(45), Date_of_birth DATE NOT NULL);
+
+            
+-- creating baggage table
+CREATE TABLE IF NOT EXISTS Baggage (Baggage_Tag VARCHAR(45) NOT NULL PRIMARY KEY, Weight DOUBLE NOT NULL, Passenger_Username VARCHAR(20), 
+						Flight_Flight_ID VARCHAR(20), FOREIGN KEY (Passenger_Username) REFERENCES Passenger(Username), FOREIGN KEY 
+                        (Flight_Flight_ID) REFERENCES Flight(Flight_ID));
+
+-- creating passenger_has_flight table
+CREATE TABLE IF NOT EXISTS Passenger_has_Flight (Passenger_Username VARCHAR(20), Flight_Flight_ID VARCHAR(20), Price DOUBLE, Class VARCHAR(45), 
+						Seat_number VARCHAR(45), FOREIGN KEY (Passenger_Username) REFERENCES Passenger(Username), FOREIGN KEY (Flight_Flight_ID) 
+                        REFERENCES Flight(Flight_ID));
+
+-- creating table to store boarded passengers
+CREATE TABLE IF NOT EXISTS Boarded_Passengers (Passenger_Username VARCHAR(20), Flight_Flight_ID VARCHAR(20), Boards TINYINT);

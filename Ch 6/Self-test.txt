@@ -1,0 +1,200 @@
+1. when we have many elements of the same type to use or store
+2. a) 5
+   b) 1
+   c) error will be thrown
+   d) int[] someArray = new int[5];
+   	  someArray[0] = 2;
+   	  someArray[0] = 5;
+   	  someArray[0] = 1;
+   	  someArray[0] = 9;
+   	  someArray[0] = 11;
+   e) for(int i = 0; i < someArray.length; i++){
+   		someArray[i] = someArray[i]*2;
+   	  }
+   f) Because we want the index;
+   g) for(int ele:someArray){
+   		System.out.println(">>> " + ele);
+   	  }
+   h) for(int ele:someArray){
+   		if(ele > 2){
+   			System.out.println(">>> " + ele);
+   		}
+   	  }
+3. 
+
+import java.util.Scanner;
+public class TemperatureReadings3{
+	public static void main(String[] args){
+		double[] temperature;
+		temprature = enterTemps();
+		displayTemps(temprature);
+		wasHot(temperature);
+	}
+
+	static double[] enterTemps(){
+		Scanner keyboard = new Scanner(System.in);
+		double[] temperatureOut = new double[7];
+		for (int i = 0; i < temperatureOut.length; i++){
+			System.out.println("Enter max temperature for day " + (i+1));
+			temperatureOut[i] = keyboard.nextDouble();
+		}
+		return tempratureOut;
+	}
+
+	static void displayTemps(double[] temperatureIn) {
+		System.out.println();
+		System.out.println("*** TEMPERATURES ENTERED");
+		System.out.println();
+		for (int i = 0; i < temperatureIn.length; i++){
+			System.out.println("day "+(i+1)+" "+temperatureIn[i]);
+		}
+	}
+
+	static void wasHot(temperature){
+		System.out.println("Days that were hot");
+		for(double temp: temprature){
+			if(temp >= 18){
+				System.out.println(">> "+temp);
+			}
+		}
+	}
+}
+
+4. 
+import java.util.Scanner;
+public class Students{
+	public static void main(String[] args){
+		int[] javaStudents;
+
+	}
+	static int[] enterExamMarks(){
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("Enter the number of students: ");
+		int size = keyboard.nextInt();
+		int[] list = new int[size];
+
+		for(int i = 0; i<size;i++){
+			System.out.print("enter no."+(i+1)+" grade: " );
+			list[i] = keyboard.nextInt();
+		}
+		return list;
+	}
+	static void increaseMarks(grades){
+		for(int i = 0; i<grades.length;i++ ){
+			grades[i] += 5;
+		}
+	}
+	static boolean allHavePassed(grades){
+		for(int i = 0; i<grades.length;i++ ){
+			if(grades[i] < 40){
+				return false;
+			}
+		}
+		return true;
+	}	
+}
+5. 
+	a) it is a feature one can use to pass arguments to main when running the program
+	b) 
+		static boolean contains(int valueIn, int ...varargs){
+			for (int currentElement : varargs){
+				if(currentElement == valueIn){
+					return true;
+				}
+			}
+			return false;
+		}
+	c) with as many and as little number of arguments
+
+6. 
+	a) 2
+	b) 4
+	c) 20
+	d) 
+
+	grades[0][0] = 'B';
+7. 
+	a) int goals[20][38];
+	b) boolean seats[70][20];
+8. 
+	static double max(double[][] twoDList){
+		double max = twoDList[0][0];
+		for(int i =0; i<twoDlist.length; i++){
+			for(int j=0; j<twoDlist[0].length; j++){
+				if(max < twoDList[i][j]){
+					max = twoDlis[i][j];
+				}
+			}
+		}
+		return max;
+	}
+9. 
+	a) int late[52][7];
+	b) 
+
+	int daysLate = 0;
+	for(int i =0; i<late.length; i++){
+		for(int j=0; j<late[0].length; j++){
+			if(late[i][j] >= 2){
+				daysLate += 1;
+			}
+		}
+	}
+10. 
+	a) char[][] magicSquare = {{'P','R','E','Y'},{'L','A','V','A'},{'O','V','E','R'},{'T','E','N','D'}};
+	b)
+
+	static void displayRow(char[][] magicSquare, int row){
+		String word;
+		for(int col = 0; col<magicSquare[row].length; col++){
+			word += magicSquare[row][col];
+		}
+		System.out.println("Word is: "+word);
+	}
+
+	c) 
+
+	static void displayColumn(char[][] magicSquare, int col){
+		String word;
+		for(int row = 0; row<magicSquare.length; row++){
+			word += magicSquare[row][col];
+		}
+		System.out.println("Word is: "+word);
+	}
+11. 
+	a) regular 2D array has equal rows and columns, while ragged doesn't.
+	b) 
+		int[][] triangle = {{},{,},{,,},{,,,}};
+	c) 
+
+		double max = tri[0][0];
+		for(int i =0; i<tri.length; i++){
+			for(int j=0; j<tri[i].length; j++){
+				if(max < tri[i][j]){
+					max = tri[i][j];
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

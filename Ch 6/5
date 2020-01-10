@@ -1,0 +1,17 @@
+static void displayRow(char[][] magicSquare, int row){
+		String word;
+		for(int col = 0; col<magicSquare[row].length; col++){
+			word += magicSquare[row][col];
+		}
+		System.out.println("Word is: "+word);
+	}
+
+
+
+static void displayColumn(char[][] magicSquare, int col){
+	String word;
+	for(int row = 0; row<magicSquare.length; row++){
+		word += magicSquare[row][col];
+	}
+	System.out.println("Word is: "+word);
+}

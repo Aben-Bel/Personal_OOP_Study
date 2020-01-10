@@ -1,0 +1,34 @@
+1.	 -	integer
+	 -	double
+	 -	char
+
+2.	the first one results in a compiler error because 75.5 is not an integer
+3.	cinema_ticket, cinemaTicket, Ticket, ticket
+4. 	
+
+import java.util.Scanner;
+public class SomeProg {
+	public static void main (String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		final int YEAR = 2019;
+		int age, bornIn;
+		System.out.print("How old are you this year? ");
+		age = keyboard.nextInt();
+		bornIn = YEAR – age;
+		System.out.println("I think you were born in " + BornIn);
+	}
+} 
+
+5. z = 70
+6. 2
+7.
+	i.	take one number from input and put it in length
+	ii. take another number from input and put it in height
+	iii. in perimeter variable place 2*(length*height)
+	iv. in area variable place length*height
+
+8.  a) yes, it is destroying the value of one value in an attempt to swap
+	b) they will have the value of the second input
+	c) I would use a third variable as temporary value carrier to swap the values
+
